@@ -159,7 +159,7 @@ box-shadow: 3px 3px 10px 0px #a0e0ae;
 }
 /*------about section--------*/
 .kitchen {
-    height: 250px;
+    height: 260px;
     width: 100%;
 }
 .team {
@@ -200,7 +200,7 @@ box-shadow: 3px 3px 10px 0px #a0e0ae;
 #footer {
     background-color: rgb(241, 241, 97);
     padding: 10px;
-    height: 80px;
+    height: 85px;
 }
 .position {
     font-weight: 900;
