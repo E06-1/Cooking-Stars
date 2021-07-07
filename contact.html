@@ -36,10 +36,11 @@
         </div>
         <div class="row">
           <div id="contactPicture">
-            <img src="/Picture/pc1.jpg" style="width: 20%" />
+            <img src="/Picture/pc1.jpg"/>
           </div>
           <div id="contactForm">
             <form action="/action_page.php">
+                <div>
               <label for="fname">First Name</label>
               <input
                 type="text"
@@ -47,6 +48,8 @@
                 name="firstname"
                 placeholder="Your name.."
               />
+            </div>
+            <div>
               <label for="lname">Last Name</label>
               <input
                 type="text"
@@ -54,6 +57,8 @@
                 name="lastname"
                 placeholder="Your last name.."
               />
+            </div>
+            <div>
               <label for="continent">Continent</label>
               <select id="continent" name="Continent">
                 <option value="australia">Australia</option>
@@ -62,6 +67,8 @@
                 <option value="europe">Europe</option>
                 <option value="asia">Asia</option>
               </select>
+            </div>
+            <div>
               <label for="subject">Subject</label>
               <textarea
                 id="subject"
@@ -69,6 +76,7 @@
                 placeholder="Write something.."
                 style="height: 170px"
               ></textarea>
+            </div>
               <input type="submit" value="Submit" />
             </form>
           </div>
