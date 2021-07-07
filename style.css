@@ -26,11 +26,26 @@ article {
 
 header {
     background-color: #A63117;
-    display: flex;
-    justify-content: space-around;
     height: 3rem;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+    float: left;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 header a {
+    color: #A63117;
     font-size: 2rem;
+    background-color: var(--margin);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
 }
