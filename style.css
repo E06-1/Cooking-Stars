@@ -13,7 +13,7 @@ body {
     color: var(--content);
     background-color: var(--background);
     height: 100vh;
-    width: calc(100vh / 2);
+    width: 60rem;
     margin: 0 auto;
     border: 0.1rem solid var(--border);
 }
