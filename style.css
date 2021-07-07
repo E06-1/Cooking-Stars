@@ -1,0 +1,36 @@
+html {
+    --content: #060e08;
+    --boxes: #F2B885;
+    --background: #dfc4bf;
+    --border: #40312C;
+    --margin: #D9D7D7;
+
+    background-color: var(--margin);
+}
+
+body {
+    color: var(--content);
+    background-color: var(--background);
+    height: 100vh;
+    width: calc(100vh / 2);
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 0.1rem solid var(--border);
+}
+
+
+article {
+    background-color: var(--boxes);
+}
+
+
+header {
+    background-color: #A63117;
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+}
+
+header a {
+    font-size: 2rem;
+}
