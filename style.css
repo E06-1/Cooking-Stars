@@ -1,7 +1,7 @@
 html {
-    --content: #060e08;
+    --content: #000000;
     --boxes: #F2B885;
-    --background: #dfc4bf;
+    --background: #f0efef;
     --border: #40312C;
     --margin: #D9D7D7;
 
@@ -9,43 +9,86 @@ html {
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
     color: var(--content);
     background-color: var(--background);
     height: 100vh;
     width: calc(100vh / 2);
     margin: 0 auto;
-    padding: 0 1rem;
     border: 0.1rem solid var(--border);
 }
 
-
-article {
-    background-color: var(--boxes);
+body > * > * {
+    margin: 0 3rem;
 }
 
+main {
+    margin-top: 3rem;
+}
 
 header {
-    background-color: #A63117;
-    height: 3rem;
-    padding: 1rem;
+    background-color: #ffe44b;
+    height: auto;
+    box-shadow: 0px 10px 5px -5px hsl(19, 80%, 30%);
 }
 
 h1 {
+    color: hsl(19, 80%, 30%);
     margin: 0;
-    float: left;
+    text-align: center;
+    font-size: 2.6em;
+
+}
+
+p {
+    text-align: justify;
+}
+
+h2, h3 {
+    color: hsl(19, 90%, 35%);
 }
 
 nav {
-
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    padding: 1rem 0;
 }
 
 header a {
-    color: #A63117;
+    color: rgb(214, 94, 39);
     font-size: 2rem;
-    background-color: var(--margin);
-    border-radius: 0.5rem;
+    background-color: white;
+    border-radius: 0.6rem;
+    box-shadow: 2px 2px 5px 0px hsl(19, 80%, 30%);
     padding: 0 1rem;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: rgb(214, 94, 39);
+    color: white;
+    transition: all 0.5s;
+}
+
+footer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
+}
+
+footer * {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+   
+}
+
+#icon-bar {
+    margin-top: 2em;
+}
+
+#copyright {
+    margin-top: 2em;
 }
