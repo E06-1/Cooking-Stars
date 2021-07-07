@@ -12,7 +12,7 @@ body {
     font-family: 'Raleway', sans-serif;
     color: var(--content);
     background-color: var(--background);
-    height: 100vh;
+    height: 150vh;
     width: 60rem;
     margin: 0 auto;
     border: 0.1rem solid var(--border);
@@ -37,7 +37,6 @@ h1 {
     margin: 0;
     text-align: center;
     font-size: 2.6em;
-
 }
 
 p {
@@ -158,5 +157,51 @@ box-shadow: 3px 3px 10px 0px #a0e0ae;
 #contactForm >* {
     padding-left: 15%;
 }
+/*------about section--------*/
+.kitchen {
+    height: 250px;
+    width: 100%;
+}
+.team {
+    margin-top: 50px;
+}
+.about-team {
+    margin-top: 30px;
+    text-align: center;
+}
 
-  
+.column {
+    float: left;
+    width: 45%;
+    padding: 0 10px;
+  }
+
+.row {
+    margin: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.card-img {
+    width: 70%;
+}
+
+#footer {
+    background-color: rgb(241, 241, 97);
+    padding: 10px;
+    height: 80px;
+}
+.position {
+    font-weight: 900;
+}
