@@ -12,6 +12,11 @@ img {
   max-width: 100%;
 }
 
+h2, h3 {
+  color: hsl(19, 90%, 35%);
+}
+
+
 @media screen and (max-width: 70rem) {
   :root {
     --content-width: 100%;
@@ -90,7 +95,55 @@ header .nav-item:hover > a{
 }
 
 main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+main article {
+  background-color: white;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
+}
+
+.row {
   position: relative;
+}
+
+main form {
+  color: rgb(214, 94, 39);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(255, 255, 255,0.85);
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
+  z-index: 2;
+}
+
+main form * {
+  width: 100%;
+}
+
+main img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
+}
+
+main section{
+margin-bottom: 1rem;
+}
+
+main p {
+  text-align: justify;
+  margin: 0.5rem 0;
 }
 
 footer {

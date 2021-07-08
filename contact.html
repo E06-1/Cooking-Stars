@@ -18,11 +18,12 @@
     <title>Cooking-Stars</title>
   </head>
   <body>
-
     <header>
       <h1>Cooking-Stars</h1>
       <nav>
-        <div class="nav-item"><a href="./index.html">Secrets from the Kitchen</a></div>
+        <div class="nav-item">
+          <a href="./index.html">Secrets from the Kitchen</a>
+        </div>
 
         <div class="nav-item"><a href="./contact.html">Contact</a></div>
         <div class="nav-item"><a href="./about.html">About us</a></div>
@@ -30,61 +31,55 @@
     </header>
 
     <main>
-
-      <div class="container">
-        <div id="contactUs">
-          <h2>Contact Us</h2>
-          <p>Send us your favorite recipe, or leave us a message:</p>
-        </div>
-        <div class="row">
-          <div id="contactPicture">
-            <img src="/Picture/pc1.jpg"/>
-          </div>
-          <div id="contactForm">
-            <form action="/action_page.php">
-                <div>
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
-            </div>
-            <div>
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-            </div>
-            <div>
-              <label for="continent">Continent</label>
-              <select id="continent" name="Continent">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                <option value="europe">Europe</option>
-                <option value="asia">Asia</option>
-              </select>
-            </div>
-            <div>
-              <label for="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style="height: 170px"
-              ></textarea>
-            </div>
-              <input type="submit" value="Submit" />
-            </form>
-          </div>
-        </div>
+      <div id="contactUs">
+        <h2>Contact Us</h2>
+        <p>Send us your favorite recipe, or leave us a message:</p>
       </div>
-
+      <div class="row">
+        <div id="contactPicture">
+          <img src="./Picture/pc1.jpg" />
+        </div>
+        <form action="/action_page.php">
+          <div>
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+          </div>
+          <div>
+            <label for="continent">Continent</label>
+            <select id="continent" name="Continent">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="europe">Europe</option>
+              <option value="asia">Asia</option>
+            </select>
+          </div>
+          <div id="subject">
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 170px"
+            ></textarea>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </main>
 
     <footer>
@@ -107,8 +102,5 @@
         <p>Copyright by Cooking-Stars, 2021</p>
       </div>
     </footer>
-
   </body>
 </html>
- 
- 
