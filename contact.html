@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script src="main.js"></script>
     <title>Cooking-Stars</title>
   </head>
   <body>
@@ -23,97 +24,81 @@
         <div class="nav-item">
           <a href="./index.html">Secrets from the Kitchen</a>
         </div>
-        
         <div class="nav-item"><a href="./contact.html">Contact</a></div>
         <div class="nav-item"><a href="./about.html">About us</a></div>
       </nav>
     </header>
 
     <main>
-      <div class="container">
-        <div id="contactUs">
-          <h2>Contact Us</h2>
-          <p>Send us your favorite recipe, or leave us a message:</p>
+      <div id="contactUs">
+        <h2>Contact Us</h2>
+        <p>Send us your favorite recipe, or leave us a message:</p>
+      </div>
+      <div class="row">
+        <div id="contactPicture">
+          <img src="./Picture/pc1.jpg" />
         </div>
-        <div class="row">
-          <div id="contactPicture">
-            <img src="./Picture/pc1.jpg"/>
+        <form action="/action_page.php">
+          <div>
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
           </div>
-          <div id="contactForm">
-            <form action="/action_page.php">
-                <div>
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
-            </div>
-            <div>
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-            </div>
-            <div>
-              <label for="continent">Continent</label>
-              <select id="continent" name="Continent">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                <option value="europe">Europe</option>
-                <option value="asia">Asia</option>
-              </select>
-            </div>
-            <div>
-              <label for="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style="height: 170px"
-              ></textarea>
-            </div>
-              <input type="submit" value="Submit" />
-            </form>
+          <div>
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
           </div>
-        </div>
+          <div>
+            <label for="continent">Continent</label>
+            <select id="continent" name="Continent">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="europe">Europe</option>
+              <option value="asia">Asia</option>
+            </select>
+          </div>
+          <div id="subject">
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 170px"
+            ></textarea>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </main>
 
-    <div class="footer">
-      <div class="footer-left">
-        <h2 class="crest">Cooking-Stars</h2><br>
-        <a href="#" class="secrets">Secrets from the Kitchen </a><br>
-        <a href="./contact.html">Contact </a> <br>
-        <a href="./about.html">About</a>
-      </div>
-    
-      <div class="footer-center">
-        <h2>Contact</h2>
-        <a><i class="fa fa-map-marker"></i> Cooking-Stars Road 1, </a> 
-          <p class="berlin">  Berlin - 12345 Germany</p>
-        <a><i class="fa fa-phone-square"> </i>+49 123456789</a><br>
-        <a><i class="fa fa-envelope-square"></i>
-        </i>info@cookingstars.com</a>
-        <p><i class="fa fa-copyright"></i>
-          Cooking-Stars, 2021</p>
-      </div>
-    
-      <div class="footer-right">
-        <h2>About</h2>
-        <p>We offer the best recipes for healthy, home made cooked meals.</p>
-        <div id="icon-bar">
+    <footer>
+      <nav>
+        <div class="nav-item"><a href="./contact.html">Contact Us</a></div>
+        <div class="nav-item"><a href="./about.html">Who Are We</a></div>
+      </nav>
+
+      <div id="icon-bar">
+        <div>
           <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
           <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
           <a href="#" class="google"><i class="fa fa-google"></i></a>
           <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
           <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
         </div>
+      </div>
+
+      <div id="copyright">
+        <p>Copyright by Cooking-Stars, 2021</p>
       </div>
     </div>
   </body>

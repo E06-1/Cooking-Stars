@@ -1,238 +1,206 @@
-html {
-    --content: #000000;
-    --boxes: #F2B885;
-    --background: #f0efef;
-    --border: #40312C;
-    --margin: #D9D7D7;
-
-    background-color: var(--margin);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Raleway', sans-serif;
-    color: var(--content);
-    background-color: var(--background);
-    height: 180vh;
-    width: 60rem;
-    margin: 0 auto;
-    border: 0.1rem solid var(--border);
+:root {
+  --content-width: 70rem;
 }
 
-body > * > * {
-    margin: 0 3rem;
-}
-
-main {
-    margin-top: 3rem;
-}
-
-header {
-    background-color: #ffe44b;
-    height: auto;
-    box-shadow: 0px 10px 5px -5px hsl(19, 80%, 30%);
-}
-
-h1 {
-    color: hsl(19, 80%, 30%);
-    margin: 0;
-    text-align: center;
-    font-size: 2.6em;
-}
-
-p {
-    text-align: justify;
+img {
+  max-width: 100%;
 }
 
 h2, h3 {
-    color: hsl(19, 90%, 35%);
+  color: hsl(19, 90%, 35%);
 }
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 1rem 0;
+
+@media screen and (max-width: 70rem) {
+  :root {
+    --content-width: 100%;
+  }
 }
 
-header a {
-    color: rgb(214, 94, 39);
-    font-size: 2rem;
-    background-color: white;
-    border-radius: 0.6rem;
-    box-shadow: 2px 2px 5px 0px hsl(19, 80%, 30%);
-    padding: 0 1rem;
-    text-decoration: none;
+
+html {
+  background-color: #d9d7d7;
+  font-size: 100%;
 }
 
-header a:hover {
-    background-color: rgb(214, 94, 39);
-    color: white;
-    transition: all 0.5s;
+body {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  background-color: #f0efef;
+  min-height: 100vh;
+  height: 100%;
+  width: var(--content-width);
+  margin: 0 auto;
+  border: 0.1rem solid #40312c;
+  border-top: 0;
+  border-bottom: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
 }
 
-/*---------Contact page-------------------*/
-  #contactUs * {
-      text-align: center;
+body > * {
+  padding: 0 4%;
 }
 
-#contactPicture {
-    position: relative;
-    width: 50%; 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffe44b;
+  box-shadow: 0px 5px 5px -5px hsl(19, 80%, 30%);
 }
 
-#contactPicture > img {
-    width: 100%;
-    border: 0.2em solid #a0e0ae;
-    box-shadow: 3px 3px 10px 0px #a0e0ae;
+header > h1 {
+  color: hsl(19, 80%, 30%);
+  text-align: center;
+  font-size: 2.6em;
+}
+
+header > nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+header .nav-item {
+  color: rgb(214, 94, 39);
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 5px 0px hsl(19, 80%, 30%);
+  padding: 0 1rem;
+}
+
+header .nav-item > a {
+  color: rgb(214, 94, 39);
+  text-decoration: none;
+}
+
+
+header .nav-item:hover{
+  background-color: rgb(214, 94, 39);
+  transition: all 0.5s;
+}
+
+header .nav-item:hover > a{
+  color: white;
+  transition: all 0.5s;
+}
+
+main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+main article {
+  background-color: white;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
+  position: relative;
 }
 
-#contactForm {
-    max-width: 50%;
+main form {
+  color: rgb(214, 94, 39);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(255, 255, 255,0.85);
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
+  z-index: 2;
 }
 
-#contactForm * {
-    width: 100%;
+main form * {
+  width: 100%;
 }
 
-#contactForm >* {
-    padding-left: 15%;
+main img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  box-shadow: 2px 2px 5px 0px hsla(19, 80%, 30%, 0.4);
 }
 
-/*------About section--------*/
-.kitchen {
-    height: 260px;
-    width: 100%;
+main section{
+margin-bottom: 1rem;
 }
 
-.team {
-    margin-top: 50px;
+main p {
+  text-align: justify;
+  margin: 0.5rem 0;
 }
 
-.about-team {
-    margin-top: 30px;
-    text-align: center;
+footer {
+  max-height: min-content;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #ffe44b;
+  box-shadow: 0px -5px 5px -5px hsl(19, 80%, 30%);
 }
 
-.column {
-    float: left;
-    width: 45%;
-    padding: 0 10px;
-  }
-
-.row {
-    margin: 20px;
+footer > * {
+  display: flex;
+  flex-direction: column;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+footer > * > * {
+  margin-top: auto;
 }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #fcfcf8fa;
-    
-}
-
-.card-img {
-    width: 70%;
-}
-
-/*-----------Footer-----------------*/
-.footer {
-    display: flex;
-    width: 100%;
-    background-color: yellow;
-    font-size: 16px;
-    margin-right: 10px;
-    font-family: Arial, "Helvetica", sans-serif;
-}
-
-.footer-left {
-    flex: 1;
-    padding: 5px;
-    width: 32%;
-    display: inline-block;
-}
-
-.footer-right {
-    flex: 1;
-    padding: 16px;
-    width: 32%;
-    margin: 0;
-    align-content: left;
-    line-height: 50px;
-}
-
-.footer-center {
-    padding: 16px;
-    width: 32%;
-}
-
-.berlin {
-    margin-left: 50px;
-}
-
-.crest {
-    font-family: Raleway;
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding: 0;   
-}
-
-.secrets {
-    margin-top: 150px;
-}
-
-#icon-bar {
-    margin-top: 0.2em;
-    white-space: 1px;
-}
-
-.fa {
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin: 3px;
-    width: 10px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    
-  }
+footer .fa {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  width: 2rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
   
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-google {
-    background: #dd4b39;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }         
+}
+
+footer .fa:hover {
+    opacity: 0.7;
+}
+
+footer .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+footer .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+footer .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+footer .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+footer .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
