@@ -34,11 +34,9 @@
         <h2>Contact Us</h2>
         <p>Send us your favorite recipe, or leave us a message:</p>
       </div>
-      <div class="row">
-        <div id="contactPicture">
-          <img src="./Picture/pc1.jpg" />
-        </div>
-        <form action="/action_page.php">
+      <div id="contactArea">
+        <img src="./Picture/pc1.jpg" alt="" />
+        <form id="contactForm" action="/action_page.php">
           <div>
             <label for="fname">First Name</label>
             <input
@@ -70,7 +68,7 @@
           <div id="subject">
             <label for="subject">Subject</label>
             <textarea
-              id="subject"
+              id="subjectText"
               name="subject"
               placeholder="Write something.."
               style="height: 170px"
@@ -89,7 +87,7 @@
 
       <div id="icon-bar">
         <div>
-          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="facebook" ti><i class="fa fa-facebook"></i></a>
           <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
           <a href="#" class="google"><i class="fa fa-google"></i></a>
           <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
@@ -100,7 +98,6 @@
       <div id="copyright">
         <p>Copyright by Cooking-Stars, 2021</p>
       </div>
-    </div>
     </footer>
   </body>
 </html>
