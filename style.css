@@ -62,6 +62,10 @@ header > h1 {
   font-size: 2.6em;
 }
 
+#burgerCheckbox {
+  display: none;
+}
+
 header > nav {
   display: flex;
   justify-content: space-around;
@@ -92,6 +96,70 @@ header .nav-item:hover > a {
   transition: all 0.5s;
 }
 
+@media screen and (max-width: 760px) {
+
+header>nav {
+  display:none;
+}
+  #burgerMenu > input {
+    height: 0;
+    width: 0;
+  }
+  
+  #burgerMenu {
+    float: right;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    position: relative;
+    width: 40px;
+    height: 15px;
+  }
+  
+  #burgerMenu::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.699);;
+    transition: transform 250ms
+  }
+  
+  #burgerCheckbox:checked + #burgerMenu::after {
+    transform-origin: center;
+    transform:translateY(-5px) rotateZ(-135deg);
+    transition: transform 250ms
+  }
+  
+  #burgerMenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 5px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.699);
+    transition: transform 250ms
+  }
+  
+  #burgerCheckbox:checked + #burgerMenu::before {
+    transform-origin: center;
+    transform:translateY(5px) rotateZ(135deg);
+    transition: transform 250ms
+  }
+
+  nav > .nav-item {
+    margin: 0.5rem auto;
+  }
+
+  #burgerCheckbox:checked ~ nav {
+    display: block;
+  }
+  
+}
+
 main {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -110,7 +178,7 @@ article.recipe {
 }
 
 article.recipe figure {
-  width:20vw;
+  width: 20vw;
   max-width: 30ch;
   max-height: 30ch;
   height: 20vw;
@@ -118,7 +186,7 @@ article.recipe figure {
   float: left;
 }
 
-article.recipe figure img{
+article.recipe figure img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -182,7 +250,8 @@ article.recipe figure img{
       hsla(0, 3%, 94%, 1) 0%,
       hsla(0, 3%, 94%, 0.3) 40% 98%,
       hsla(0, 3%, 94%, 1) 100%
-    ),linear-gradient(
+    ),
+    linear-gradient(
       to right,
       hsla(0, 3%, 94%, 1) 0%,
       hsla(0, 3%, 94%, 0.3) 2% 98%,
@@ -195,14 +264,14 @@ article.recipe figure img{
 }
 
 .citeContainer {
-  position:relative;
+  position: relative;
   width: 100%;
   height: 35vh;
 }
 
 #aboutUs-cite {
   position: absolute;
-  left:10%;
+  left: 10%;
   top: 20%;
   max-width: 15ch;
 }
