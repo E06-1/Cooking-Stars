@@ -97,15 +97,32 @@ header .nav-item:hover > a {
 }
 
 @media screen and (max-width: 760px) {
+  body {
+    border: none;
+  }
 
-header>nav {
-  display:none;
-}
+  header {
+    height: 3.1rem;
+  }
+  header > nav {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: block;
+    position: fixed;
+    top: 3.1rem;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, #ffe44b00, #ffe44b);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 500ms;
+  }
   #burgerMenu > input {
     height: 0;
     width: 0;
   }
-  
+
   #burgerMenu {
     float: right;
     margin-top: 1rem;
@@ -115,7 +132,7 @@ header>nav {
     width: 40px;
     height: 15px;
   }
-  
+
   #burgerMenu::after {
     content: "";
     position: absolute;
@@ -123,16 +140,16 @@ header>nav {
     height: 5px;
     width: 100%;
     border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.699);;
-    transition: transform 250ms
+    background-color: rgba(0, 0, 0, 0.699);
+    transition: transform 250ms;
   }
-  
+
   #burgerCheckbox:checked + #burgerMenu::after {
     transform-origin: center;
-    transform:translateY(-5px) rotateZ(-135deg);
-    transition: transform 250ms
+    transform: translateY(-5px) rotateZ(-135deg);
+    transition: transform 250ms;
   }
-  
+
   #burgerMenu::before {
     content: "";
     position: absolute;
@@ -141,13 +158,13 @@ header>nav {
     width: 100%;
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.699);
-    transition: transform 250ms
+    transition: transform 250ms;
   }
-  
+
   #burgerCheckbox:checked + #burgerMenu::before {
     transform-origin: center;
-    transform:translateY(5px) rotateZ(135deg);
-    transition: transform 250ms
+    transform: translateY(5px) rotateZ(135deg);
+    transition: transform 250ms;
   }
 
   nav > .nav-item {
@@ -155,9 +172,9 @@ header>nav {
   }
 
   #burgerCheckbox:checked ~ nav {
-    display: block;
+    transform: scaleY(1);
+    transition: transform 500ms;
   }
-  
 }
 
 main {
